@@ -1,0 +1,21 @@
+--- s3gpg
+
+This tools allows you to backup your files to S3 using GPG encryption.
+
+You will need to edit the s3gpg.py and change the varibles to match your configuration.
+
+Please export your GPG Public Key and replace it with the current gpg.asc file and change the gpgrecipientaddress in s3gpg.py to match
+
+
+--- required packages
+
+pip install boto3 python-gnupg
+
+apt install gpg
+
+there are two GPG pip packages please uninstall gnupg and install python-gnupg
+
+
+--- crontab example
+
+30 2 * * * root python /root/s3gpg/s3gpg.py
